@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "other_products",
+  "info": {
+    "singularName": "other-product",
+    "pluralName": "other-products",
+    "displayName": "other-product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "description": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product",
+      "inversedBy": "other_products"
+    }
+  }
+}
